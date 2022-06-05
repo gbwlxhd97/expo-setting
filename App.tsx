@@ -1,14 +1,29 @@
 // import Header from '@src/components/Atoms/Header';
 import Header from 'components/Atoms/Header';
+import LottieUfo from 'components/Atoms/LottieUfo';
 import { StatusBar } from 'expo-status-bar';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
 export default function App() {
+  const [isSplash, setIsSplash] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSplash(false)
+    },2000)
+  })
   return (
     <View style={styles.container}>
-      <Header/>      
-      <Text>Open up App.tsx to start working on your app!</Text>
+      {isSplash && <LottieUfo />}
+      {
+        !isSplash && 
+        <React.Fragment>
+          <Header />
+          <Text>Open up App.tsx to start working on your app!</Text>
+        </React.Fragment>
+      }
       <StatusBar style="auto" />
     </View>
   );
