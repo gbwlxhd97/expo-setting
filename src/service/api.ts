@@ -1,6 +1,3 @@
-import poke from "./poketmon";
+import poke from './poketmon';
 
-
-export {
-  poke
-}
+export { poke };

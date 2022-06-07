@@ -10,9 +10,9 @@ import { poke as pokeApi } from 'service/api';
 
 
 export default function App() {
-  const [isSplash, setIsSplash] = useState(true);
+  const [isSplash, setIsSplash] =       useState(true);
   useEffect(() => {
-    setTimeout(() => {
+         setTimeout(() => {
       setIsSplash(false)
     },2000)
   },[])

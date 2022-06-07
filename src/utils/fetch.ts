@@ -1,11 +1,11 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
-enum methodType  {
+enum methodType {
   GET = 'GET',
   POST = 'POST',
   PUT = 'PUT',
   PATCH = 'PATCH',
-  DELETE = 'DELETE'
+  DELETE = 'DELETE',
 }
 
 export const axiosInstance = axios.create({
@@ -22,7 +22,7 @@ export const requestAPI = () => {
         url,
         method: method,
         data: bodyJson,
-      })
+      });
     };
   };
 

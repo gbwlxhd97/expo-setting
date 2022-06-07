@@ -4,7 +4,6 @@
 // import AnimatedLottieView from 'lottie-react-native';
 // import { Text } from 'react-native';
 
-
 // type Props = {
 //   ufoMessage: string | null;
 // };
