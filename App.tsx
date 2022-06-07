@@ -7,29 +7,26 @@ import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { poke as pokeApi } from 'service/api';
 
-
-
 export default function App() {
-  const [isSplash, setIsSplash] =       useState(true);
+  const [isSplash, setIsSplash] = useState(true);
   useEffect(() => {
-         setTimeout(() => {
-      setIsSplash(false)
-    },2000)
-  },[])
+    setTimeout(() => {
+      setIsSplash(false);
+    }, 2000);
+  }, []);
   useEffect(() => {
     pokeApi.test1();
-  },[])
-  
+  }, []);
+
   return (
     <View style={styles.container}>
       {/* {isSplash && <LottieUfo />} */}
-      {
-        !isSplash && 
+      {!isSplash && (
         <React.Fragment>
           <Header />
           <Text>Open up App.tsx to start working on your app!</Text>
         </React.Fragment>
-      }
+      )}
       <StatusBar style="auto" />
     </View>
   );
